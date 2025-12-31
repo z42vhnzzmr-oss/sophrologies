@@ -22,11 +22,10 @@ h1, h2 { font-family: 'Playfair Display', serif; }
     background-size: cover; background-position: center;
     display: flex; align-items: center; justify-content: center; text-align: center;
 }
-.hero-content { max-width: 900px; padding: 20px; }
+.hero-content { max-width: 950px; padding: 20px; }
 .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
 .highlight { color: var(--vert); }
 
-/* Nouveaux boutons */
 .hero-action-btns { display: flex; gap: 20px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
 .btn-main { background: var(--vert); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
 .btn-price { background: white; color: var(--fonce); border: 2px solid var(--fonce); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
@@ -39,8 +38,8 @@ h1, h2 { font-family: 'Playfair Display', serif; }
 .about-image img { width: 400px; border-radius: 15px; box-shadow: 20px 20px 0px var(--beige); }
 .experience-badge { position: absolute; bottom: 20px; right: -10px; background: var(--vert); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
 
-.italic { font-style: italic; border-left: 3px solid var(--vert); padding-left: 20px; margin: 20px 0; }
-.contact-box { margin-top: 30px; background: var(--beige); padding: 25px; border-radius: 10px; }
+.italic { font-style: italic; border-left: 4px solid var(--vert); padding-left: 20px; margin: 25px 0; color: #555; }
+.contact-box { margin-top: 30px; background: var(--beige); padding: 25px; border-radius: 10px; border-left: 5px solid var(--vert); }
 
 .bg-light { background: var(--beige); }
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
@@ -54,5 +53,6 @@ footer { padding: 40px; background: var(--fonce); color: white; text-align: cent
     .about-flex { flex-direction: column; text-align: center; }
     .about-image img { width: 100%; max-width: 350px; }
     .hero h1 { font-size: 2.5rem; }
+    .hero-action-btns { flex-direction: column; align-items: center; }
 }
 
