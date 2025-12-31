@@ -41,21 +41,22 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 .italic { font-style: italic; border-left: 4px solid var(--vert); padding-left: 20px; margin: 25px 0; color: #555; }
 .contact-box { margin-top: 30px; background: var(--beige); padding: 25px; border-radius: 10px; border-left: 5px solid var(--vert); }
 
-/* Liens Téléphone et Mail */
-.contact-link { color: var(--fonce); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: 0.3s; }
-.contact-link:hover { color: var(--vert); border-bottom: 1px solid var(--vert); }
+.contact-link { color: var(--fonce); text-decoration: none; font-weight: 600; transition: 0.3s; }
+.contact-link:hover { color: var(--vert); text-decoration: underline; }
 
 .bg-light { background: var(--beige); }
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { background: white; padding: 40px; border-radius: 15px; text-align: center; border: 1px solid #eee; }
+.card { background: white; padding: 40px; border-radius: 15px; text-align: center; border: 1px solid #eee; position: relative; }
 .card i { font-size: 2.5rem; color: var(--vert); margin-bottom: 20px; }
+
+/* Style spécial Acouphènes Clairval */
+.featured-medical { border: 2px solid var(--accent); background: linear-gradient(to bottom, #fff, #fdfaf7); }
+.badge-clairval { display: inline-block; background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
+
 .featured { border: 2px solid var(--vert); }
 
-/* Style du nouveau bloc Groupes */
 .group-session-box { margin-top: 60px; text-align: center; padding: 40px; background: white; border: 1px dashed var(--vert); border-radius: 15px; }
-.group-session-box h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--fonce); margin-bottom: 10px; }
-.group-session-box p { color: #666; margin-bottom: 25px; font-style: italic; }
-.btn-group { background: var(--fonce); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+.btn-group { background: var(--fonce); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-size: 0.9rem; transition: 0.3s; display: inline-block; margin-top: 15px; }
 .btn-group:hover { background: var(--vert); }
 
 footer { padding: 40px; background: var(--fonce); color: white; text-align: center; }
