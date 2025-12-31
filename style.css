@@ -1,59 +1,53 @@
 :root {
-    --primary: #6ab0aa;
-    --dark: #2d3436;
-    --light: #f9f9f9;
-    --white: #ffffff;
+    --vert: #6ab0aa;
+    --fonce: #2d3436;
+    --beige: #fdfaf7;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; color: var(--dark); line-height: 1.6; }
-h1, h2, h3 { font-family: 'Playfair Display', serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; color: var(--fonce); line-height: 1.6; scroll-behavior: smooth; }
+h1, h2 { font-family: 'Playfair Display', serif; }
 
-.navbar { 
-    display: flex; justify-content: space-between; align-items: center; 
-    padding: 20px 8%; background: var(--white); position: sticky; top: 0; z-index: 1000;
-}
-.logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); }
-.nav-links { list-style: none; display: flex; align-items: center; }
-.nav-links li { margin-left: 30px; }
-.nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; }
+/* La barre du haut */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: white; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.logo { font-weight: 700; font-size: 1.5rem; }
+.logo span { color: var(--vert); }
+.nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--fonce); font-weight: 500; }
+.btn-rdv { background: var(--vert); color: white !important; padding: 8px 20px; border-radius: 50px; }
 
-.btn-small { background: var(--primary); color: white !important; padding: 8px 20px; border-radius: 50px; }
-
+/* La grande photo du haut */
 .hero { 
-    height: 90vh; 
-    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-                url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1350&q=80'); 
+    height: 80vh; 
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1350&q=80'); 
     background-size: cover; background-position: center;
     display: flex; align-items: center; justify-content: center; text-align: center;
 }
+.hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
+.highlight { color: var(--vert); }
+.btn-main { background: var(--vert); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
-.highlight { color: var(--primary); }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+/* Section À Propos */
+.section { padding: 80px 8%; }
+.container { max-width: 1000px; margin: auto; text-align: center; }
+.about-flex { display: flex; gap: 50px; align-items: center; text-align: left; }
+.about-image img { width: 350px; border-radius: 15px; box-shadow: 15px 15px 0px var(--beige); }
+.contact-box { margin-top: 20px; background: var(--beige); padding: 20px; border-radius: 10px; }
 
-.btn-main { background: var(--primary); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; }
-.btn-secondary { margin-left: 20px; color: var(--dark); text-decoration: underline; }
+/* Les Tarifs */
+.bg-light { background: var(--beige); }
+.price-cards { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
+.card { background: white; padding: 30px; border-radius: 15px; width: 250px; border: 1px solid #eee; }
+.featured { border: 2px solid var(--vert); transform: scale(1.05); }
+.amt { font-size: 2rem; font-weight: 700; color: var(--vert); margin: 10px 0; }
 
-.section { padding: 80px 8%; text-align: center; }
-.bg-light { background: var(--light); }
-.container { max-width: 1200px; margin: auto; }
-.subtitle { color: #666; margin-bottom: 50px; }
+footer { padding: 30px; background: var(--fonce); color: white; text-align: center; }
 
-.features { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
-.feature-card { flex: 1; min-width: 250px; padding: 30px; background: var(--white); border-radius: 10px; }
-.feature-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
-
-.pricing { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-.price-card { background: var(--white); padding: 40px; border-radius: 15px; width: 300px; border: 1px solid #eee; }
-.price-card.featured { border: 2px solid var(--primary); }
-.price { font-size: 2.5rem; font-weight: 700; color: var(--primary); margin: 20px 0; }
-
-.btn-select { display: block; margin-top: 20px; padding: 10px; background: var(--dark); color: white; text-decoration: none; border-radius: 5px; }
-
-footer { padding: 40px; background: var(--dark); color: white; }
-
+/* Pour les téléphones */
 @media (max-width: 768px) {
+    .about-flex { flex-direction: column; text-align: center; }
     .nav-links { display: none; }
-    .hero h1 { font-size: 2.5rem; }
+    .hero h1 { font-size: 2.2rem; }
 }
+
+
